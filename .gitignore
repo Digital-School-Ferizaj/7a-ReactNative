@@ -3,3 +3,4 @@ passwords.js
 node_modules/
 # Ignore environment variable files
 .env
+.expo
