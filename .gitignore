@@ -1,0 +1,5 @@
+passwords.js
+# Ignore node_modules
+node_modules/
+# Ignore environment variable files
+.env
