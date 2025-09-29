@@ -6,12 +6,13 @@ const ProductComp = ({props}) => {
         <View style={styles.product}>
             <Image 
             //source={{ uri: 'https://static.vecteezy.com/system/resources/thumbnails/024/841/285/small_2x/wireless-headphone-isolated-on-transparent-background-high-quality-bluetooth-headphone-for-advertising-and-product-catalogs-generative-ai-png.png' }}
-            source={props.image}
+            source={require('../../assets/producti1.png')}
             style={styles.productImage}
             />
             <Text style={styles.productName}>{props.productName}</Text>
             <Text style={styles.productPrice}>${props.productPrice}</Text>
         </View>
+        
     );
 };
 
