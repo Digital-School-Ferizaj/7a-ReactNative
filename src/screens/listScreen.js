@@ -17,6 +17,8 @@ const ListScreen = ({navigation}) => {
 
             <FlatList
                 data={students}
+                keyExtractor={student => student.id.toString()}
+                showsHorizontalScrollIndicator={false}
                 renderItem={({ item }) => (
                     <Text>{item.name} {item.surname}, Age: {item.age}</Text>
                 )}

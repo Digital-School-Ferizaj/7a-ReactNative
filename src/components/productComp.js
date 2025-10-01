@@ -1,19 +1,19 @@
 import React from "react";
 import { Text, View, TouchableOpacity, StyleSheet, Image } from "react-native";
 
-const ProductComp = ({props}) => {
-    return (
-        <View style={styles.product}>
-            <Image 
-            //source={{ uri: 'https://static.vecteezy.com/system/resources/thumbnails/024/841/285/small_2x/wireless-headphone-isolated-on-transparent-background-high-quality-bluetooth-headphone-for-advertising-and-product-catalogs-generative-ai-png.png' }}
-            source={require('../../assets/producti1.png')}
-            style={styles.productImage}
-            />
-            <Text style={styles.productName}>{props.productName}</Text>
-            <Text style={styles.productPrice}>${props.productPrice}</Text>
-        </View>
-        
-    );
+// accept productName, productPrice and productImage props directly
+const ProductComp = ({ productName, productPrice, productImage }) => {
+  return (
+    <View style={styles.product}>
+      <Image
+      // for remote images pass { uri: 'https://...' } as productImage
+      source={productImage ? productImage : require('../../assets/producti1.png')}
+      style={styles.productImage}
+      />
+      <Text style={styles.productName}>{productName}</Text>
+      <Text style={styles.productPrice}>${productPrice}</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
