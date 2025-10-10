@@ -5,10 +5,10 @@ import { Text, View, TouchableOpacity, StyleSheet, FlatList, Image } from "react
 const FlexScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <View style={styles.item1}>1</View>
-            <View style={styles.item2}>2</View>
-            <View style={styles.item3}>3</View>
-            <View style={styles.item4}>4</View>
+            <View style={[styles.item1, styles.itemCommon]}>1</View>
+            <View style={[styles.item2, styles.itemCommon]}>2</View>
+            <View style={[styles.item3, styles.itemCommon]}>3</View>
+            <View style={[styles.item4, styles.itemCommon]}>4</View>
         </View>
     );
 }
@@ -16,10 +16,33 @@ const FlexScreen = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: "row",
+        flexDirection: "column",
         //  flexDirection: row | row-reverse | column | column-reverse;
-
+        justifyContent: "space-around",
+        //horizontal alignment
+        //  justifyContent: flex-start | flex-end | center | space-between | space-around | space-evenly;
+        alignItems: "center",
+        //vertical alignment
+        //  alignItems: flex-start | flex-end | center | stretch | baseline;
     },
+    itemCommon: {
+        width: 50,
+        height: 50,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    item1:{
+        backgroundColor: "red",
+    },
+    item2:{
+        backgroundColor: "blue",
+    },
+    item3:{
+        backgroundColor: "green",
+    },
+    item4:{
+        backgroundColor: "yellow",
+    }
 });
 
 

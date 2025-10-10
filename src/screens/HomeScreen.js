@@ -41,6 +41,13 @@ const HomeScreen = ({navigation}) => {
         <Text style={styles.buttonText}>Go to Simple Product List</Text>
       </TouchableOpacity>
 
+       <TouchableOpacity
+        onPress={() => navigation.navigate("FlexScreen")}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>Go to Flex Screen</Text>
+      </TouchableOpacity>
+
     </View>
   );
 };
@@ -58,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: "blue",
     padding: 10,
     borderRadius: 5,
-    width: 150,
+    width: 250,
     height: 50,
     marginBottom: 10,
   },

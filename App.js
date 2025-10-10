@@ -7,6 +7,7 @@ import ShopScreen from "./src/screens/shopScreen";
 import ListScreen from './src/screens/listScreen';
 import ProductList from './src/screens/productList';
 import SimProductList from './src/screens/simProdList';
+import FlexScreen from './src/screens/flexScreen';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ export default function App() {
         <Stack.Screen name="List" component={ListScreen} />
         <Stack.Screen name="ProductList" component={ProductList} />
         <Stack.Screen name="SimProductList" component={SimProductList} />
+        <Stack.Screen name="FlexScreen" component={FlexScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
