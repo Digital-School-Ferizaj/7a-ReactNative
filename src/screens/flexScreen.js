@@ -19,10 +19,10 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         //  flexDirection: row | row-reverse | column | column-reverse;
         justifyContent: "space-around",
-        //horizontal alignment
+        //horizontal alignment if flexDirection is column or vertical if flexDirection is row
         //  justifyContent: flex-start | flex-end | center | space-between | space-around | space-evenly;
         alignItems: "center",
-        //vertical alignment
+        //vertical alignment if flexDirection is column or horizontal if flexDirection is row
         //  alignItems: flex-start | flex-end | center | stretch | baseline;
     },
     itemCommon: {
