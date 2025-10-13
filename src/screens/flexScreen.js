@@ -4,11 +4,18 @@ import { Text, View, TouchableOpacity, StyleSheet, FlatList, Image } from "react
 
 const FlexScreen = ({navigation}) => {
     return (
-        <View style={styles.container}>
-            <View style={[styles.item1, styles.itemCommon]}>1</View>
-            <View style={[styles.item2, styles.itemCommon]}>2</View>
-            <View style={[styles.item3, styles.itemCommon]}>3</View>
-            <View style={[styles.item4, styles.itemCommon]}>4</View>
+        <View>
+            <View style={styles.container}>
+                <View style={[styles.item1, styles.itemCommon]}>1</View>
+                <View style={[styles.item2, styles.itemCommon]}>2</View>
+                <View style={[styles.item3, styles.itemCommon]}>3</View>
+                <View style={[styles.item4, styles.itemCommon]}>4</View>
+            </View>
+            <View>
+                <TouchableOpacity onPress={() => Linking.openURL("https://css-tricks.com/snippets/css/a-guide-to-flexbox/")}>
+                    <Text>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -33,6 +40,8 @@ const styles = StyleSheet.create({
     },
     item1:{
         backgroundColor: "red",
+        alignSelf: "flex-end",
+        //alignSelf: auto | flex-start | flex-end | center | stretch | baseline;
     },
     item2:{
         backgroundColor: "blue",
