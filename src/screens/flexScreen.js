@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         //vertical alignment if flexDirection is column or horizontal if flexDirection is row
         //  alignItems: flex-start | flex-end | center | stretch | baseline;
+        alignContent: "center",
+        //  alignContent: flex-start | flex-end | center | stretch | space-between | space-around;
+        // only works if there's multiple rows
+        height: 400,
     },
     itemCommon: {
         width: 50,
