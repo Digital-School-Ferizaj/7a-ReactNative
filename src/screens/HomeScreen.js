@@ -48,6 +48,13 @@ const HomeScreen = ({navigation}) => {
         <Text style={styles.buttonText}>Go to Flex Screen</Text>
       </TouchableOpacity>
 
+        <TouchableOpacity
+        onPress={() => navigation.navigate("ApiScreen")}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>Go to API Screen</Text>
+      </TouchableOpacity>
+
     </View>
   );
 };
