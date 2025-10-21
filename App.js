@@ -9,6 +9,7 @@ import ProductList from './src/screens/productList';
 import SimProductList from './src/screens/simProdList';
 import FlexScreen from './src/screens/flexScreen';
 import ApiScreen from './src/screens/apiScreen';
+import ChallengeScreen from './src/screens/challengeScreen';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +28,7 @@ export default function App() {
         <Stack.Screen name="SimProductList" component={SimProductList} />
         <Stack.Screen name="FlexScreen" component={FlexScreen} />
         <Stack.Screen name="ApiScreen" component={ApiScreen} />
+        <Stack.Screen name="ChallengeScreen" component={ChallengeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

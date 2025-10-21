@@ -55,6 +55,13 @@ const HomeScreen = ({navigation}) => {
         <Text style={styles.buttonText}>Go to API Screen</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity
+        onPress={() => navigation.navigate("ChallengeScreen")}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>Go to Challenge Screen</Text>
+      </TouchableOpacity>
+
     </View>
   );
 };
