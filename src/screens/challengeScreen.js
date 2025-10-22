@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, ScrollView } from "react-native";
+import { View, Text, StyleSheet, FlatList, ScrollView, Image } from "react-native";
 
 class ChallengeScreen extends React.Component {
 
@@ -12,7 +12,7 @@ class ChallengeScreen extends React.Component {
 
     async componentDidMount() {
         const data = await fetch('https://jsonplaceholder.typicode.com/users');
-        const photo = await fetch('https://jsonplaceholder.typicode.com/photos');
+        const photo = await fetch('https://picsum.photos/v2/list');
         const dataJson = await data.json();
         const photoJson = await photo.json();
         this.setState({ posts: dataJson, photos: photoJson });
@@ -22,7 +22,7 @@ class ChallengeScreen extends React.Component {
         const { posts, photos } = this.state;
         return (
             <View style={styles.container}>
-                <Text>ApiScreen</Text>
+                <Text> Challenge Screen</Text>
                 <FlatList
                     data={posts}
                     keyExtractor={item => item.id.toString()}
@@ -31,7 +31,7 @@ class ChallengeScreen extends React.Component {
                     contentContainerStyle={styles.listContent}
                     renderItem={({ item }) => (
                         <View style={styles.postContainer}>
-                            <Image source={{ uri: photos[item.id - 1].thumbnailUrl }} style={{ width: 50, height: 50 }} />
+                            <Image source={{ uri: photos[item.id + 3].download_url }} style={{ width: 50, height: 50 }} />
                             <Text style={styles.postTitle}>{posts[item.id - 1].name}</Text>
                             <Text style={styles.postBody}>{posts[item.id - 1].email}</Text>
                             <Text style={styles.postBody}>{posts[item.id - 1].phone}</Text>
