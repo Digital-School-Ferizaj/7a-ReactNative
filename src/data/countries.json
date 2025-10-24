@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Albania",
         "code": "AL",
         "capital": "Tirana",
@@ -8,6 +9,7 @@
         "flag": "assets/flags/albania.png"
     },
     {
+        "id": 2,
         "name": "Belgium",
         "code": "BE",
         "capital": "Brussels",
@@ -16,6 +18,7 @@
         "flag": "assets/flags/belgium.png"
     },
     {
+        "id": 3,
         "name": "Canada",
         "code": "CA",
         "capital": "Ottawa",
@@ -24,6 +27,7 @@
         "flag": "assets/flags/canada.png"
     },
     {
+        "id": 4,
         "name": "Kosovo",
         "code": "XK",
         "capital": "Pristina",

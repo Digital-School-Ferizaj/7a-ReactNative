@@ -7,6 +7,13 @@ const HomeScreen = ({navigation}) => {
       <Text style={styles.text}>HomeScreen</Text>
 
       <TouchableOpacity
+        onPress={() => navigation.navigate("CountriesScreen")}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>Go to Countries</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
         onPress={() => navigation.navigate("About")}
         style={styles.button}
       >
