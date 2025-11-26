@@ -33,7 +33,7 @@ const StackNavigator = () => {
   );
 }
 
-const HomeStack = ({navigaton}) => {
+const HomeStack = ({navigation}) => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen name="Home" component={HomeScreen} />
@@ -56,3 +56,4 @@ const screenOptionStyle = {
 };
 
 export {StackNavigator, HomeStack, AboutStack};
+export default StackNavigator;
